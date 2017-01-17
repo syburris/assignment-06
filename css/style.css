@@ -31,7 +31,7 @@ body{
    display: inline-block;
    margin: auto;
 }
-.menu {
+.menu{
    width: 100%;
    display: inline-block;
    margin: auto;
@@ -66,6 +66,7 @@ body{
    vertical-align: top;
    font-size: 0;
    margin: auto;
+   position: relative;
 }
 
 .footer-1 {
@@ -75,6 +76,13 @@ body{
    display: inline-block;
    text-align: center;
    padding: 10px;
+   vertical-align: top;
+}
+.link-container {
+   width: 100%;
+   display: inline-block;
+   margin: 0;
+   font-size: 0;
 }
 .top {
    width: 9%;
@@ -91,18 +99,11 @@ body{
    vertical-align: middle;
 }
 
-.footer-2 {
-   width: 100%;
-   margin: auto;
-   font-size: 0;
-   display: inline-block;
-   text-align: center;
-   padding: 10px;
-}
 .search {
    width: 100%;
    margin: auto;
    position: relative;
+   padding: 20px;
 }
 .search-box {
    width: 60%;
@@ -111,12 +112,80 @@ body{
    border-radius: 3%;
 }
 .icon {
-   width: 60%;
+   width: 200px;
    font-size: 15px;
    color: gray;
    position: absolute;
    top: 0;
    right: 0;
-   transform: translateY(25%) translateX(10%);
+   transform: translateY(140%) translateX(-2%);
    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+   .header {
+      position: relative;
+   }
+   .logo {
+      width: 33.33%;
+   }
+   .menu {
+      width: 20%;
+      text-align: right;
+      vertical-align: top;
+
+   }
+
+   .image-container .image {
+      width: 33.33%;
+   }
+
+   .footer-1 {
+      display: inline-block;
+      margin: 0;
+      vertical-align: top;
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      opacity: .9;
+      bottom: -30%;
+      left: 0;
+      transform: translateY(50%);
+   }
+   .link-container {
+      padding: 20px;
+      width: 50%;
+      display: inline-block;
+      margin: 0;
+      font-size: 0;
+   }
+   .search {
+      margin: 0;
+      display: inline-block;
+      margin: 0;
+      text-align: left;
+      width: 50%;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .image-container .image {
+      width: 25%;
+   }
+   .footer-1 {
+      display: inline-block;
+      margin: 0;
+      vertical-align: top;
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      opacity: .9;
+      left: 0;
+   }
+   .link-container {
+      display: none;
+   }
+   .search {
+      width: 20%;
+   }
 }
